@@ -472,15 +472,6 @@ h2::after {
   font-size: 1rem;
 }
 
-.timeline-location {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
 .location-icon {
   width: 16px;
   height: 16px;
@@ -820,8 +811,9 @@ h2::after {
 }
 
 .competition-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 240, 255, 0.15);
+  border-color: rgba(0, 240, 255, 0.4);
 }
 
 .competition-badge {
@@ -998,8 +990,9 @@ h2::after {
 }
 
 .volunteer-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 240, 255, 0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 240, 255, 0.15);
+  border-color: rgba(0, 240, 255, 0.4);
 }
 
 .volunteer-header {
@@ -1259,4 +1252,13 @@ footer p {
   .hero-buttons {
     flex-direction: column;
   }
+}
+
+.common-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
 }
