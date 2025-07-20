@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize for both Experience and Education sections
     setupTimeline('#experience');
     setupTimeline('#education');
+    setupTimeline('#internships');
   };
 
   // ======================
