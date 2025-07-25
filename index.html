@@ -27,6 +27,7 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Educations</a></li>
+        <li><a href="#thesis">Thesis</a></li>
         <li><a href="#publications">Publications</a></li>        
         <li><a href="#internships">Internships</a></li>
         <li><a href="#competitions">Competitions</a></li>
@@ -42,6 +43,7 @@
   </header>
 
   <main>
+    
     <!-- Intro Section -->
     <section id="intro" class="hero">
       <div class="container hero-content">
@@ -97,7 +99,7 @@
             </div>
           </div>
           <div class="about-image animate-on-scroll">
-            <img src="assets/images/robotics-lab.webp" alt="Working on robotics project" />
+            <img src="assets/images/robotics-lab.png" alt="Working on robotics project" />
           </div>
         </div>
       </div>
@@ -111,13 +113,13 @@
           <div class="skill-card animate-on-scroll">
             <i class="fas fa-robot"></i>
             <h3>Robotics Frameworks</h3>
-            <p>ROS/ROS2, Gazebo, MoveIt, Nav2, RTAB-Map</p>
+            <p>ROS/ROS2, Isaac Sim, Gazebo, MoveIt, Nav2, RTAB-Map</p>
           </div>
           
           <div class="skill-card animate-on-scroll">
             <i class="fas fa-code"></i>
             <h3>Programming</h3>
-            <p>Python, C++, MATLAB, Bash</p>
+            <p>Python, C++, HTML, CSS, JavaScript, YAML, JSON, Bash, MATLAB</p>
           </div>
           
           <div class="skill-card animate-on-scroll">
@@ -129,7 +131,7 @@
           <div class="skill-card animate-on-scroll">
             <i class="fas fa-microchip"></i>
             <h3>Embedded Systems</h3>
-            <p>Arduino, Raspberry Pi, Sensor Integration</p>
+            <p>Arduino, Raspberry Pi, STM32, AVR (Atmel), Sensor Integration</p>
           </div>
           
           <div class="skill-card animate-on-scroll">
@@ -173,6 +175,11 @@
                 <li><strong>Drone Interference Analysis:</strong> Collected spectrum data and trained ML models to detect signals (Bluetooth, FHSS, OFDM)</li>
                 </ul>
             </div>
+            <div class="common-links">
+                <a href="https://www.kn.e-technik.tu-dortmund.de/" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-external-link-alt"></i> Institute Website
+                </a>
+            </div>
             </div>
         </div>
 
@@ -197,6 +204,11 @@
                 <li><strong>Testing:</strong> Conducted software- and device-level testing of medical devices in accordance with ISO 13485 standards</li>
                 </ul>
             </div>
+            <div class="common-links">
+              <a href="https://www.betic.org/" target="_blank" rel="noopener noreferrer" class="common-link">
+                <i class="fas fa-external-link-alt"></i> BETiC Website
+              </a>
+            </div>            
             </div>
         </div>
         </div>
@@ -216,62 +228,382 @@
         </div>
         
         <div class="project-grid">
+
+          <!-- UR5 -->
           <div class="project-card animate-on-scroll" data-category="robotics">
             <span class="category-label robotics-label">Robotics</span>
             <div class="project-image">
-              <img src="assets/autonomous-robot.jpg" alt="Autonomous Mobile Robot" />
+              <img src="assets/images/ur5-gif.gif" alt="UR5-BarAlign-RL-Isaac-sim" />
               <div class="project-overlay">
-                <a href="#" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/sahilrajpurkar03/UR5-BarAlign-RL-Isaac-sim" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
               </div>
             </div>
             <div class="project-info">
-              <h3>Autonomous Mobile Robot</h3>
-              <p>Warehouse automation system using LiDAR, ROS, and advanced path planning algorithms for efficient navigation.</p>
+              <h3>UR5-BarAlign-RL-Isaac-sim</h3>
+              <p>
+                Developed a reinforcement learning pipeline for bar alignment using the UR5 robotic arm in NVIDIA Isaac Sim and ROS2.
+                The workflow includes data collection with manual joystick control, structured episode formatting for LeRobot,
+                training with diffusion policy, and model evaluation in simulation.
+              </p>
               <ul class="project-skills">
-                <li>ROS</li>
-                <li>SLAM</li>
-                <li>Path Planning</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="project-card animate-on-scroll" data-category="robotics">
-            <span class="category-label robotics-label">Robotics</span>
-            <div class="project-image">
-              <img src="assets/robotic-arm.jpg" alt="Gesture-Controlled Robotic Arm" />
-              <div class="project-overlay">
-                <a href="#" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>Gesture-Controlled Robotic Arm</h3>
-              <p>Arduino and IMU powered robotic arm controlled by human gestures with real-time response.</p>
-              <ul class="project-skills">
-                <li>Arduino</li>
-                <li>IMU</li>
-                <li>Embedded C</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="project-card animate-on-scroll" data-category="ai">
-            <span class="category-label ai-label">AI/ML</span>
-            <div class="project-image">
-              <img src="assets/vision-system.jpg" alt="Vision-Based Navigation System" />
-              <div class="project-overlay">
-                <a href="#" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-              </div>
-            </div>
-            <div class="project-info">
-              <h3>Vision-Based Navigation for MAVs</h3>
-              <p>Developed computer vision system for micro aerial vehicles using OpenCV and ROS.</p>
-              <ul class="project-skills">
-                <li>OpenCV</li>
-                <li>ROS</li>
+                <li>Isaac Sim</li>
+                <li>ROS2</li>
+                <li>LeRobot</li>
+                <li>Reinforcement Learning</li>
                 <li>Python</li>
               </ul>
             </div>
           </div>
+
+          <!-- LiDAR-based 3D Object Detection -->
+          <div class="project-card animate-on-scroll" data-category="robotics">
+            <span class="category-label robotics-label">Robotics</span>
+            <div class="project-image">
+              <img src="assets/images/LIO-SLAM-COLOR.png" alt="LiDAR-based 3D Object Detection System" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/CNI_Custom_LIO-SLAM-COLOUR_isaacsim" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>LiDAR-based 3D Object Detection System</h3>
+              <p>
+                Developed a LiDAR-based 3D object detection system for a mobile robot using NVIDIA Isaac Sim, ROS2, and Python.
+                Built 3D SLAM using LiDAR, colorized the point cloud with an RGB camera, and streamed the fused 3D data
+                to MMDetection for real-time object detection.
+              </p>
+              <ul class="project-skills">
+                <li>Isaac Sim</li>
+                <li>ROS2</li>
+                <li>LiDAR</li>
+                <li>MMDetection</li>
+                <li>3D SLAM</li>
+                <li>Python</li>
+                <li>TensorFlow</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Air Hockey -->
+          <div class="project-card animate-on-scroll" data-category="robotics">
+            <span class="category-label robotics-label">Robotics</span>
+            <div class="project-image">
+              <img src="assets/images/Air-hockey-gif.gif" alt="Robotic Air Hockey System" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/CNI_Custom_LIO-SLAM-COLOUR_isaacsim" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Air Hockey System using xArm Robotic Arm</h3>
+              <p>
+                Designed a robotic air hockey system using uFactory xArm 6-axis robotic arms. Simulated a human vs machine game where
+                one arm was user-controlled and the other trained using machine learning for autonomous gameplay.
+                Enabled real-time interaction, trajectory tracking, and strategy learning to mimic competitive behavior.
+              </p>
+              <ul class="project-skills">
+                <li>xArm 6</li>
+                <li>Robotics Simulation</li>
+                <li>Machine Learning</li>
+                <li>Python</li>
+                <li>Real-time Control</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Chatbot -->
+          <div class="project-card animate-on-scroll" data-category="ai">
+            <span class="category-label ai-label">AI/ML</span>
+            <div class="project-image">
+              <img src="assets/images/chatbot-gif.gif" alt="Prototypical Chatbot for SI/PI/EMC" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/pcb-sipiemc-chatbot" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Prototypical Chatbot for SI/PI/EMC | TU Dortmund</h3>
+              <p>
+                Created an AI-based chatbot using RASA NLU to assist PCB designers with Signal Integrity (SI),
+                Power Integrity (PI), and Electromagnetic Compatibility (EMC) issues, providing real-time
+                guidance and optimization within EDA workflows. Integrated simulation software into the chatbot,
+                enabling on-platform electrical design simulations.
+              </p>
+              <ul class="project-skills">
+                <li>RASA NLU</li>
+                <li>AI/ML</li>
+                <li>EDA Tools</li>
+                <li>Python</li>
+              </ul>
+            </div>
+          
+          </div>
+
+          <!-- Drone Signal Interference Detection -->
+          <div class="project-card animate-on-scroll" data-category="ai">
+            <span class="category-label ai-label">AI/ML</span>
+            <div class="project-image">
+              <img src="assets/images/drone-spectrum.gif" alt="Drone Signal Interference Detection" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/Drone-Signal-Interference-Detection" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>              
+            </div>
+            <div class="project-info">
+              <h3>Drone Signal Interference Detection Using ML</h3>
+              <p>
+                Developed an AI-based signal classification pipeline to detect and identify wireless interference in drone communication systems. 
+                Collected real-time spectrum data using SDR tools and trained models to classify interference from Bluetooth, FHSS, and OFDM signals.
+              </p>
+              <ul class="project-skills">
+                <li>Software Defined Radio (SDR)</li>
+                <li>Spectrum Analysis</li>
+                <li>Signal Classification</li>
+                <li>Python (Scikit-learn, NumPy)</li>
+                <li>Bluetooth / FHSS / OFDM</li>
+                <li>Machine Learning</li>
+              </ul>
+            </div>
+          </div>         
+
+          <!-- Rescue Robotics -->
+          <div class="project-card animate-on-scroll" data-category="robotics">
+            <span class="category-label robotics-label">Robotics</span>
+            <div class="project-image">
+              <img src="assets/images/Rescue-Robotics-gif.gif" alt="Rescue Robotics Demonstration" />
+            </div>
+            <div class="project-info">
+              <h3>Rescue Robotics Demonstration</h3>
+              <p>
+                Integrated mm-Wave health monitoring sensors onto a Boston Dynamics quadruped robot in a Linux-based environment,
+                enabling real-time physiological data acquisition over 5G. Conducted rescue operation simulations at the
+                Deutsches Rettungsrobotik Zentrum (DRZ) to evaluate system performance in search-and-rescue scenarios.
+              </p>
+              <ul class="project-skills">
+                <li>Boston Dynamics</li>
+                <li>mm-Wave Sensors</li>
+                <li>Linux</li>
+                <li>5G Communication</li>
+                <li>Rescue Robotics</li>
+                <li>Sensor Integration</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Automated Palletizer -->
+          <div class="project-card animate-on-scroll" data-category="robotics">
+            <span class="category-label robotics-label">Robotics</span>
+            <div class="project-image">
+              <img src="assets/images/Automated-Palletizer-Cell-gif.gif" alt="Automated Palletizer Cell Control System HMI" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/Automated-Palletizer-Cell-Control-System" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Automated Palletizer Cell Control System</h3>
+              <p>
+                Built a complete simulation of a ROS 2-driven robotic palletizing cell integrated with a REST API and real-time web-based HMI.
+                The system processes palletizing requests from a warehouse management system (WMS), monitors safety-critical parameters, and
+                allows human interaction through a live dashboard.
+              </p>
+              <ul class="project-skills">
+                <li>ROS 2 Humble</li>
+                <li>REST API (Python FastAPI)</li>
+                <li>WebSocket + JavaScript HMI</li>
+                <li>Real-Time Simulation</li>
+                <li>Robotic System Control</li>
+                <li>Linux (Ubuntu 22.04)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Fire Redundant System -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/Fire-Redundant-gif.gif" alt="ESP32-S3 Fire Redundant System" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/Fire-Redundent-System" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>ESP32-S3 Fire Redundant System using IR Thermal Imaging</h3>
+              <p>
+                Built a fire detection and response system using ESP32-S3, MLX90640 IR thermal camera, and a relay-controlled actuator.
+                The system detects abnormal heat zones and automatically triggers a fire extinguisher while sending real-time WiFi alerts
+                to a server. Features a configurable temperature threshold and modular Arduino codebase.
+              </p>
+              <ul class="project-skills">
+                <li>ESP32-S3</li>
+                <li>MLX90640 Thermal Camera</li>
+                <li>Relay Control</li>
+                <li>Arduino</li>
+                <li>WiFi & HTTP</li>
+                <li>Embedded Systems</li>
+              </ul>
+            </div>
+          </div>           
+
+          <!-- Fire Bird Robot -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/firebird-gif.gif" alt="Fire Bird Robot - Line Following & Obstacle Avoidance" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/line-following-with-obstacle-avoidance" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Line-Following with Obstacle Avoidance: Fire Bird Robot</h3>
+              <p>
+                Designed and implemented a line-following robot using the Fire Bird V platform (ATmega2560) developed under IIT Bombay’s MHRD e-Yantra initiative. 
+                The robot follows a line and avoids obstacles in real time using IR and proximity sensors, and is fully programmed at the register level via Atmel Studio.
+              </p>
+              <ul class="project-skills">
+                <li>ATmega2560 & ATmega8</li>
+                <li>IR Proximity Sensors</li>
+                <li>Line Sensors</li>
+                <li>Motor Control (PWM)</li>
+                <li>Register-Level Programming</li>
+                <li>Atmel Studio</li>
+                <li>e-Yantra IIT Bombay</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Robot Drive Systems -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/RobotDriveSystems.gif" alt="Robot Drive Systems" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/robot-drive-systems" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Robot Drive Systems: Multi-Drive Robot Control with AVR</h3>
+              <p>
+                Designed and implemented drive control systems for differential, 3-wheel omni, and 4-wheel omni robots using AVR ATmega2560 microcontroller and Bluetooth-based PS2-style controller input. Features include PWM motor control, drive-specific kinematics, and wireless joystick integration for advanced robotic motion.
+              </p>
+              <ul class="project-skills">
+                <li>AVR ATmega2560</li>
+                <li>2W / 3W / 4W Omni Drive</li>
+                <li>PWM Motor Control</li>
+                <li>Kinematic Mapping</li>
+                <li>Bluetooth (HC-05/06)</li>
+                <li>PS2 Joystick Controller</li>
+                <li>Atmel Studio</li>
+                <li>UART Communication</li>
+              </ul>
+            </div>
+          </div>  
+          
+          <!-- Line Following Three Wheel -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/line-following-three-wheel.gif" alt="line-following-three-wheel-omni-drive" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/line-following-three-wheel-omni-drive.git" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Line Following Three Wheel Omni Drive</h3>
+              <p>
+                Designed and developed a three‑wheel omni‑directional robot for the Robocon competition. The robot autonomously follows a white line 
+                using an OPT101 sensor array. A custom line-following algorithm was implemented on an AVR ATmega2560 microcontroller. The system 
+                leverages PWM motor control and kinematic mapping to achieve smooth and responsive navigation.
+              </p>
+              <ul class="project-skills">
+                <li>Line Following</li>
+                <li>AVR ATmega2560</li>
+                <li>3W Omni Drive</li>
+                <li>PWM Motor Control</li>
+                <li>Kinematic Mapping</li>
+                <li>Bluetooth (HC-05/06)</li>
+                <li>PS2 Joystick Controller</li>
+                <li>Atmel Studio</li>
+                <li>UART Communication</li>
+              </ul>
+            </div>
+          </div>      
+
+          <!-- Swerve Drive Systems -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/swerve-drive-gif.gif" alt="Swerve Drive System" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/swerve-drive-system" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Swerve Drive System</h3>
+              <p>
+              </p>
+              <ul class="project-skills">
+                <li>AVR ATmega2560</li>
+                <li>Swerve Drive</li>
+                <li>PWM Motor Control</li>
+                <li>Kinematic Mapping</li>
+                <li>Bluetooth (HC-05/06)</li>
+                <li>PS2 Joystick Controller</li>
+                <li>Atmel Studio</li>
+                <li>UART Communication</li>
+              </ul>
+            </div>
+          </div>                
+
+          <!-- Prototype Color Sorter Machine -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/color-sorter-gif.gif" alt="Prototype Color Sorter Machine" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/Prototype-color-sorter-machine.git" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>Prototype Color Sorter Machine</h3>
+              <p>
+                This project presents a working prototype for automatically sorting objects based on their color. The system uses an OPT101 photodiode sensor 
+                for color detection and is controlled by an STM32F103 microcontroller. Color is determined via ADC values, and two servo motors 
+                handle object positioning and sorting into designated bins.
+              </p>
+              <ul class="project-skills">
+                <li>STM32F103x</li>
+                <li>OPT101 Color Sensor</li>
+                <li>ADC Signal Processing</li>
+                <li>Servo Motor Control</li>
+                <li>Embedded C</li>
+                <li>Hardware Prototyping</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- IR Health Monitor -->
+          <div class="project-card animate-on-scroll" data-category="embedded">
+            <span class="category-label embedded-label">Embedded</span>
+            <div class="project-image">
+              <img src="assets/images/IRHealthMonitor.png" alt="IR Health Monitor on Shoulder Brace" />
+              <div class="project-overlay">
+                <a href="https://github.com/sahilrajpurkar03/ir-health-monitor" title="View Code" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3>IR Health Monitor: Wearable Vital Monitoring System</h3>
+              <p>
+                Developed a wearable health monitoring system integrated into a shoulder brace for post-surgery recovery. Powered by an ESP32,
+                the device reads SpO2, breath rate, and skin temperature using the SparkFun MAX30102 and MLX90640 sensors, and transmits
+                the data wirelessly to a remote server via HTTP.
+              </p>
+              <ul class="project-skills">
+                <li>ESP32</li>
+                <li>MAX30102 (SpO2 & Respiration)</li>
+                <li>MLX90640 Thermal Sensor</li>
+                <li>Arduino</li>
+                <li>HTTP & JSON</li>
+                <li>IoT Health Monitoring</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -281,6 +613,7 @@
     <div class="container">
         <h2>Education</h2>
         <div class="timeline">
+
         <!-- TU Dortmund -->
         <div class="timeline-item animate-on-scroll">
             <div class="timeline-logo">
@@ -302,6 +635,11 @@
                 <li><strong>Key Courses:</strong> Mobile Robots, Machine Learning, Robotic Manipulators, Computer Vision</li>
                 </ul>
             </div>
+            <div class="common-links">
+                <a href="https://www.tu-dortmund.de/" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-external-link-alt"></i> Institute Website
+                </a>
+            </div>            
             </div>
         </div>
 
@@ -326,10 +664,94 @@
                 <li><strong>Key Courses:</strong> Control Systems, Embedded Systems, Digital Signal Processing</li>
                 </ul>
             </div>
+            <div class="common-links">
+                <a href="https://kjsce.somaiya.edu/en" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-external-link-alt"></i> Institute Website
+                </a>
+            </div>  
             </div>
         </div>
-        </div>
+      </div>
     </div>
+    </section>
+
+    <!-- Thesis Section -->
+    <section id="thesis" class="section">
+      <div class="container">
+        <h2>Thesis</h2>
+        <div class="competitions-grid">
+          
+          <!-- Master Thesis -->
+          <div class="competition-card animate-on-scroll">
+            <div class="competition-images">
+              <img src="assets/images/masterthesis-gif.gif" alt="Radar-Based Detection Preview" />
+              <img src="assets/images/MasterThesis-pic.png" alt="Radar Setup" />
+            </div>
+            <div class="competition-content">
+              <div class="competition-badge">🎓 Master's Thesis</div>
+              <h3>Towards 6G-Driven Sensing: Radar-Based Object <br> Detection for Logistics Entities</h3>
+              <div class="competition-team-info">
+                <img src="assets/logos/tu-dortmund.png" alt="TU Dortmund Logo" class="competition-team-logo" />
+                <span>Technical University Dortmund</span>
+              </div>
+              <p class="competition-org">Oct 2023 – Jun 2024</p>
+              <div class="competition-details">
+                <ul>
+                  <li>Developed ML-based detection pipeline using TI’s IWR6843ISK mmWave radar for logistics automation.</li>
+                  <li>Trained YOLOv7, Detectron2, and OpenPCDet models on radar-derived 2D/3D data for entity detection (e.g., forklifts, robots).</li>
+                  <li>Enabled real-time operation in cluttered indoor environments, demonstrating radar’s resilience and privacy-preserving capabilities over LiDAR and cameras.</li>
+                </ul>
+              </div>
+              <div class="common-links">
+                <a href="https://github.com/sahilrajpurkar03/Master-Thesis.git" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="https://github.com/sahilrajpurkar03/Master-Thesis/blob/master/docs/report/MasterThesisReport_242976_Towards6GSensing.pdf" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-file-pdf"></i> Thesis Document
+                </a>
+                <a href="https://drive.google.com/file/d/1qwa-ioMouso5uBDjkdK7SJ49DNsSAqRX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-video"></i> Presentation Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bachelors Thesis Card -->
+          <div class="competition-card animate-on-scroll">
+            <div class="competition-images">
+              <img src="assets/images/BachelorThesis-gif.gif" alt="Thesis Preview" />
+              <img src="assets/images/BachelorThesis-pic.jpg" alt="Thesis Diagram" />
+            </div>
+            <div class="competition-content">
+              <div class="competition-badge">🎓 Bachelor's Thesis</div>
+              <h3>Controlled Motion of a Pneumatic <br> Quadruped Robot</h3>
+              <div class="competition-team-info">
+                <img src="assets/logos/kj-somaiya.png" alt="K J Somaiya College Logo" class="competition-team-logo" />
+                <span>K J Somaiya College of Engineering</span>
+              </div>
+              <p class="competition-org">Sep 2019 – Apr 2020</p>
+              <div class="competition-details">
+                <ul>
+                  <li>Collaborated with Mercury Pneumatic Pvt. Ltd. to design a pneumatic quadruped robot with two active degrees of freedom.</li>
+                  <li>Developed and tested C++ control algorithms for walking and pronking gaits to evaluate robot dynamics and controllability.</li>
+                  <li>Customized the PCB to optimize space and ensure seamless integration within the robot’s structure.</li>
+                </ul>
+              </div>
+              <div class="common-links">
+                <a href="https://github.com/sahilrajpurkar03/Bachelor-Thesis" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fab fa-github"></i> Code
+                </a>
+                <a href="assets/docs/thesis-document.pdf" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-file-pdf"></i> Thesis Document
+                </a>
+                <a href="https://www.kjscerobocon.in/mercury.html" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fas fa-newspaper"></i> Event News
+                </a>
+              </div>
+            </div>
+          </div>         
+        </div>
+      </div>
     </section>
 
     <!-- Publications Section -->
@@ -426,6 +848,11 @@
                   <li>Addressed lack of local automation options with a custom-built control system</li>
                 </ul>
               </div>
+              <div class="common-links">
+                <a href="assets/certificates//LOR-EngimaMachines.pdf" target="_blank" rel="noopener noreferrer" class="common-link">
+                  <i class="fas fa-file-signature"></i> LOR
+                </a>
+              </div>
             </div>
           </div>
 
@@ -487,7 +914,7 @@
                 </ul>
               </div>
               <div class="common-links">
-                <a href="https://github.com/sahilrajpurkar03/line-tracking-with-obstacle-avoidance.git" target="_blank" rel="noopener noreferrer" class="common-link">
+                <a href="https://github.com/sahilrajpurkar03/line-following-with-obstacle-avoidance.git" target="_blank" rel="noopener noreferrer" class="common-link">
                   <i class="fab fa-github"></i> Code
                 </a>
                 <a href="assets/certificates/Certificate e-Yantra.pdf" target="_blank" rel="noopener noreferrer" class="common-link">
@@ -501,7 +928,6 @@
       </div>
     </section>
 
-
     <!-- Competitions Section -->
     <section id="competitions" class="section">
     <div class="container">
@@ -509,12 +935,12 @@
         <div class="competitions-grid">
         <!-- RoboCon 2019 -->
         <div class="competition-card animate-on-scroll">
-            <div class="competition-badge">🏆 5th Place | 🏅 Winner - MATLAB Competition</div>
             <div class="competition-images">
               <img src="assets/images/robocon-gif.gif" alt="RoboCon Image 1" />
               <img src="assets/images/robocon-photo.jpg" alt="RoboCon Image 2" />
             </div>              
             <div class="competition-content">
+            <div class="competition-badge">🏆 5th Place | 🏅 Winner - MATLAB Competition</div>
             <h3>RoboCon 2019</h3>
             <div class="competition-team-info">
               <img src="assets/logos/TKR-logo.png" alt="Team KSJCE RoboCon Logo" class="competition-team-logo" />
@@ -539,12 +965,12 @@
 
         <!-- Shell Eco-marathon 2019 -->
         <div class="competition-card animate-on-scroll">
-            <div class="competition-badge">🥇 1st Place  | 🏅 Winner - Safety Award</div>
             <div class="competition-images">
               <img src="assets/images/eta-gif.gif" alt="RoboCon Image 1" />
               <img src="assets/images/eta-photo.jpg" alt="RoboCon Image 2" />
             </div>            
             <div class="competition-content">
+            <div class="competition-badge">🥇 1st Place  | 🏅 Winner - Safety Award</div>
             <h3>Shell Eco-marathon 2019</h3>
             <div class="competition-team-info">
               <img src="assets/logos/eta-logo.png" alt="Team ETA Logo" class="competition-team-logo" />
@@ -567,13 +993,14 @@
 
         <!-- eMEDHA 2021-->
         <div class="competition-card animate-on-scroll">
-            <div class="competition-badge">🏅 Best Creativity Award</div>
+            
             <div class="competition-images">
               <img src="assets/images/eMedha_2.png" alt="eMEDHA Image 1" />
               <img src="assets/images/eMedha_1.png" alt="eMEDHA Image 2" />
             </div>            
             <div class="competition-content">
             <h3>eMEDHA 2021</h3>
+            <div class="competition-badge">🏅 Best Creativity Award</div>
             <div class="competition-team-info">
               <span>Team 22</span>
             </div>              
@@ -634,6 +1061,7 @@
     <div class="container">
         <h2>Volunteering</h2>
         <div class="volunteering-grid">
+
         <!-- ROBOCUP 2024 -->
         <div class="volunteer-card animate-on-scroll">
             <div class="volunteer-header">
@@ -655,6 +1083,9 @@
             </div>
             <div class="common-links">
               <a href="https://github.com/tudo-cni/vsting-sa" target="_blank" rel="noopener noreferrer" class="common-link"><i class="fab fa-github"></i> Code</a>
+              <a href="https://drive.google.com/drive/folders/1p5_c8NrH7JWN31VzyeKEKVBZPXlOfkyo?usp=sharing" target="_blank" rel="noopener noreferrer" class="common-link">
+                <i class="fas fa-camera"></i> Events Photos
+              </a>              
             </div>
         </div>
 
@@ -681,31 +1112,6 @@
             </div>
         </div>
 
-        <!-- Workshop -->
-        <div class="volunteer-card animate-on-scroll">
-            <div class="volunteer-header">
-            <i class="fas fa-laptop-code volunteer-icon"></i>
-            <div>
-                <h3>Coding Instructor</h3>
-                <p class="volunteer-org">Workshop - Introduction to Arduino</p>
-                <br>
-            </div>
-            </div>
-            <p class="common-location"><i class="fas fa-map-marker-alt"></i>Mumbai, India</p>
-            <div class="volunteer-details">
-            <span class="volunteer-date">June 2018</span>
-            <ul>
-                <li>Teach robotics fundamentals to underprivileged students</li>
-                <li>Develop curriculum for beginner Arduino workshops</li>
-                <li>Mentor teams for internal robotics competitions</li>
-            </ul>
-            </div>
-            <div class="common-links">
-              <a href="https://github.com/sahilrajpurkar03/ArduinoCode" target="_blank" rel="noopener noreferrer" class="common-link"><i class="fab fa-github"></i> Code</a>
-              <a href="assets/certificates/Workshop Certificate 2018.pdf" target="_blank" rel="noopener noreferrer" class="common-link"><i class="fas fa-certificate"></i> Certificate </a>
-            </div>
-        </div>
-
         <!-- eMEDIC -->
         <div class="volunteer-card animate-on-scroll">
           <div class="volunteer-header">
@@ -729,6 +1135,31 @@
               <i class="fas fa-certificate"></i> Certificate
             </a>
           </div>
+        </div>
+
+        <!-- Workshop -->
+        <div class="volunteer-card animate-on-scroll">
+            <div class="volunteer-header">
+            <i class="fas fa-laptop-code volunteer-icon"></i>
+            <div>
+                <h3>Coding Instructor</h3>
+                <p class="volunteer-org">Workshop - Introduction to Arduino</p>
+                <br>
+            </div>
+            </div>
+            <p class="common-location"><i class="fas fa-map-marker-alt"></i>Mumbai, India</p>
+            <div class="volunteer-details">
+            <span class="volunteer-date">June 2018</span>
+            <ul>
+                <li>Teach robotics fundamentals to underprivileged students</li>
+                <li>Develop curriculum for beginner Arduino workshops</li>
+                <li>Mentor teams for internal robotics competitions</li>
+            </ul>
+            </div>
+            <div class="common-links">
+              <a href="https://github.com/sahilrajpurkar03/ArduinoCode" target="_blank" rel="noopener noreferrer" class="common-link"><i class="fab fa-github"></i> Code</a>
+              <a href="assets/certificates/Workshop Certificate 2018.pdf" target="_blank" rel="noopener noreferrer" class="common-link"><i class="fas fa-certificate"></i> Certificate </a>
+            </div>
         </div>
 
         </div>

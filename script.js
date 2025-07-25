@@ -99,21 +99,41 @@ document.addEventListener('DOMContentLoaded', function() {
   // ======================
   const initProjectFilter = () => {
     const tabButtons = document.querySelectorAll('.project-tab-btn');
+    const projectCards = document.querySelectorAll('.project-card');
     if (tabButtons.length === 0) return;
 
+    // Set default category
+    const defaultCategory = 'robotics';
+
+    // Apply default filter on load
     tabButtons.forEach(button => {
-      button.addEventListener('click', function() {
+      const category = button.getAttribute('data-category');
+      if (category === defaultCategory) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+
+    projectCards.forEach(card => {
+      card.style.display = (card.getAttribute('data-category') === defaultCategory) ? 'block' : 'none';
+    });
+
+    // Handle button click filtering
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function () {
         const category = this.getAttribute('data-category');
-        
+
         // Update active tab
         tabButtons.forEach(btn => btn.classList.remove('active'));
         this.classList.add('active');
-        
+
         // Filter projects
-        document.querySelectorAll('.project-card').forEach(card => {
-          card.style.display = (category === 'all' || card.getAttribute('data-category') === category) 
-            ? 'block' 
-            : 'none';
+        projectCards.forEach(card => {
+          card.style.display =
+            category === 'all' || card.getAttribute('data-category') === category
+              ? 'block'
+              : 'none';
         });
       });
     });
