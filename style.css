@@ -320,6 +320,10 @@ h2::after {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    /* Add a fade from left */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 30%, black 100%);
 }
 
 .skills-container {
@@ -423,12 +427,21 @@ h2::after {
 }
 
 .timeline-content {
+  position: relative;
   padding: 30px;
   background: var(--card-bg);
   border-radius: 12px;
   transition: all 0.3s ease;
   border: 1px solid rgba(0, 240, 255, 0.2);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  background-image: 
+    linear-gradient(to right, var(--card-bg) 50%, transparent 100%), 
+    var(--background-image, url('assets/images/default-image.png'));
+
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
 }
 
 .timeline-content:hover {
@@ -655,7 +668,7 @@ h2::after {
 }
 
 .project-info {
-  padding: 20px;
+  padding: 10px;
 }
 
 .project-info h3 {
