@@ -464,8 +464,13 @@ h2::after {
 }
 
 .timeline-header span {
-  color: var(--text-secondary);
-  font-size: 1rem;
+  display: inline-block;
+  background: rgba(18, 50, 53, 0.904);
+  color: var(--accent);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  font-size: 1.0rem;
 }
 
 .timeline-organization {
