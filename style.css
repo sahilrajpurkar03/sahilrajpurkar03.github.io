@@ -198,22 +198,21 @@ h2::after {
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center; /* center horizontally */
+  justify-content: center; 
   flex-wrap: wrap;
-  gap: 40px; /* add space between text and image */
+  gap: 30px; 
 }
 
 .hero-text {
-  padding-right: 0; /* remove right padding since text is centered */
+  padding-right: 0; 
   flex: 1;
   min-width: 300px;
-  padding-right: 40px;
 }
 
 .hero-text, .hero-profile {
-  flex: 1 1 400px; /* allow shrinking, basis 400px */
-  max-width: 1000px; /* restrict max width */
-  text-align: left; /* center text */
+  flex: 1 1 400px; 
+  max-width: 1000px; 
+  text-align: left; 
 }
 
 .hero-text h1 {
@@ -274,12 +273,12 @@ h2::after {
   min-width: 300px;
   position: relative;
   display: flex;
-  justify-content: center; /* center the image */
+  justify-content: center; 
 }
 
 .hero-img {
-  width: 100%;
-  max-width: 350px; /* smaller max width */
+  width: 70%;
+  max-width: 350px; 
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(61, 194, 255, 0.3);
   position: relative;
