@@ -171,6 +171,12 @@ h2::after {
   color: var(--accent);
 }
 
+.nav-links a.active {
+  border-bottom: 2px solid #00bfff; /* underline effect */
+  color: #00bfff; /* highlight color */
+  font-weight: bold;
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;

@@ -165,6 +165,36 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // ======================
+  // 6. SCROLL SPY EFFECT
+  // ======================
+  const initScrollSpy = () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+
+      // Detect which section is currently in viewport
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // Adjust offset for navbar height
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      // Highlight the active navigation link
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
+    });
+  };  
+
+  // ======================
   // INITIALIZE ALL FEATURES
   // ======================
   initMobileMenu();
@@ -172,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initTimelineSections();
   initProjectFilter();
   initScrollAnimations();
+  initScrollSpy();
 
   // Optional: Console greeting
   console.log('%c👋 Hello! Thanks for checking out my portfolio.', 
