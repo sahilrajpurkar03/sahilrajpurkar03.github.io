@@ -429,6 +429,7 @@ h2::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   border: 3px solid var(--accent);
   z-index: 2;
   box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
