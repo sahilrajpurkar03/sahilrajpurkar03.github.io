@@ -22,8 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!hamburger || !navLinks) return;
 
     hamburger.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
-      hamburger.classList.toggle('active');
+      const isOpen = navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      hamburger.setAttribute('aria-label', `${isOpen ? 'Close' : 'Open'} navigation menu`);
       document.body.classList.toggle('no-scroll');
     });
     
@@ -32,8 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
         document.body.classList.remove('no-scroll');
       });
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
+        document.body.classList.remove('no-scroll');
+        hamburger.focus();
+      }
     });
   };
 
@@ -104,14 +119,26 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!container) return;
 
       container.querySelectorAll('.timeline-hint').forEach(hint => {
-        hint.addEventListener('click', function() {
+        hint.setAttribute('role', 'button');
+        hint.setAttribute('tabindex', '0');
+        hint.setAttribute('aria-expanded', 'false');
+
+        const toggleDetails = function() {
           const details = this.nextElementSibling;
           const arrow = this.querySelector('.arrow-icon');
-          
-          details.classList.toggle('active');
-          arrow.style.transform = details.classList.contains('active') 
-            ? 'rotate(180deg)' 
-            : 'rotate(0)';
+
+          const isOpen = details.classList.toggle('active');
+          details.style.maxHeight = isOpen ? `${details.scrollHeight}px` : '0px';
+          this.setAttribute('aria-expanded', String(isOpen));
+          arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0)';
+        };
+
+        hint.addEventListener('click', toggleDetails);
+        hint.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleDetails.call(hint);
+          }
         });
       });
     };
