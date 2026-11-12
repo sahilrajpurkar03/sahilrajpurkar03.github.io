@@ -18,6 +18,16 @@
   --highlight-gray: #607d8b;
 }
 
+:root[data-theme="light"] {
+  --primary: #f3f7fa;
+  --secondary: #ffffff;
+  --accent: #007f91;
+  --accent-dark: #005f6c;
+  --text-primary: #17232b;
+  --text-secondary: #4a5b64;
+  --card-bg: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +40,7 @@ body {
   color: var(--text-primary);
   scroll-behavior: smooth;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
@@ -107,17 +118,29 @@ h2::after {
   width: 100%;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
 .navbar.scrolled {
   background: rgba(18, 20, 28, 0.95);
 }
 
+:root[data-theme="light"] .navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+}
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.navbar nav {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .logo {
@@ -131,10 +154,12 @@ h2::after {
 .nav-links {
   display: flex;
   list-style: none;
+  gap: 20px;
 }
 
 .nav-links li {
-  margin-left: 30px;
+  margin-left: 0;
+  white-space: nowrap;
 }
 
 .nav-links a {
@@ -169,6 +194,23 @@ h2::after {
   cursor: pointer;
   font-size: 1.5rem;
   color: var(--accent);
+}
+
+.theme-toggle {
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--primary);
+  transform: translateY(-2px);
 }
 
 .nav-links a.active {
@@ -814,7 +856,7 @@ h2::after {
 /* Competitions Styles */
 .competitions-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(550px, 100%), 1fr));
   gap: 30px;
   margin-top: 40px;
 }
@@ -873,6 +915,10 @@ h2::after {
   flex-direction: column;
 }
 
+:root[data-theme="light"] .competition-badge {
+  background-color: rgba(23, 35, 43, 0.75);
+}
+
 .competition-org {
   color: var(--text-secondary);
   margin: 10px 0 15px;
@@ -891,7 +937,7 @@ h2::after {
 }
 
 .competition-details li::before {
-  content: "▸";
+  content: "\25B8";
   position: absolute;
   left: -20px;
   color: var(--accent);
@@ -945,13 +991,19 @@ h2::after {
 
 .competition-images {
   display: flex;
+  height: 280px;
+  overflow: hidden;
 }
 
 .competition-images img {
   width: 50%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.competition-images img:only-child {
+  width: 100%;
 }
 
 
@@ -1209,8 +1261,22 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    gap: 10px;
+  }
+
+  .navbar nav {
+    flex: 0 0 auto;
+  }
+
   .hamburger {
     display: block;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
+    margin-right: 15px;
   }
   
   .nav-links {
@@ -1232,6 +1298,33 @@ footer p {
   
   .nav-links li {
     margin: 15px 0;
+  }
+
+  .timeline-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .timeline-header span {
+    white-space: normal;
+  }
+
+  .timeline-header h3 {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .competition-badge {
+    position: static;
+    display: inline-block;
+    align-self: flex-end;
+    margin: 0 0 12px auto;
+    font-size: 1rem;
+  }
+
+  .competitions-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
   
   .hero-text {
@@ -1259,6 +1352,10 @@ footer p {
 }
 
 @media (max-width: 576px) {
+  .competition-images {
+    height: 220px;
+  }
+
   .hero-text h1 {
     font-size: 2.2rem;
   }

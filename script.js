@@ -38,7 +38,35 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // ======================
-  // 2. SCROLL EFFECTS
+  // 2. THEME TOGGLE
+  // ======================
+  const initThemeToggle = () => {
+    const themeToggle = document.querySelector('.theme-toggle');
+    if (!themeToggle) return;
+
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = savedTheme === 'light' ? 'light' : 'dark';
+
+    const updateTheme = (theme) => {
+      const isLight = theme === 'light';
+      root.dataset.theme = theme;
+      themeToggle.innerHTML = `<i class="fas fa-${isLight ? 'moon' : 'sun'}"></i>`;
+      themeToggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+      themeToggle.setAttribute('title', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+    };
+
+    updateTheme(initialTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+      localStorage.setItem('theme', nextTheme);
+      updateTheme(nextTheme);
+    });
+  };
+
+  // ======================
+  // 3. SCROLL EFFECTS
   // ======================
   const initScrollEffects = () => {
     // Navbar scroll effect
@@ -68,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // ======================
-  // 3. TIMELINE INTERACTIONS
+  // 4. TIMELINE INTERACTIONS
   // ======================
   const initTimelineSections = () => {
     const setupTimeline = (containerSelector) => {
@@ -95,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // ======================
-  // 4. PROJECT FILTERING
+  // 5. PROJECT FILTERING
   // ======================
   const initProjectFilter = () => {
     const tabButtons = document.querySelectorAll('.project-tab-btn');
@@ -140,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // ======================
-  // 5. SCROLL ANIMATIONS
+  // 6. SCROLL ANIMATIONS
   // ======================
   const initScrollAnimations = () => {
     const animateElements = document.querySelectorAll('.animate-on-scroll');
@@ -165,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function() {
   };
 
   // ======================
-  // 6. SCROLL SPY EFFECT
+  // 7. SCROLL SPY EFFECT
   // ======================
   const initScrollSpy = () => {
     const sections = document.querySelectorAll("section");
@@ -198,6 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // INITIALIZE ALL FEATURES
   // ======================
   initMobileMenu();
+  initThemeToggle();
   initScrollEffects();
   initTimelineSections();
   initProjectFilter();
